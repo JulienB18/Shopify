@@ -1,0 +1,47 @@
+<!doctype html>
+<html class="no-js" lang="{{- request.locale.iso_code -}}">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+
+    <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
+    {%- unless settings.fonts_header.system? and settings.fonts_body.system? -%}
+    <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
+    {%- endunless -%}
+
+    {%- unless settings.fonts_header.system? -%}
+    {{ settings.fonts_header | font_url | preload_tag: as: 'font', type: 'font/woff2' }}
+    {%- endunless -%}
+
+    {%- unless settings.fonts_body.system? -%}
+    {{ settings.fonts_body | font_url | preload_tag: as: 'font', type: 'font/woff2' }}
+
+    {%- endunless -%}
+
+    {%- liquid
+      render 'head-seo'
+      render 'head-metas'
+      render 'head-settings'
+    -%}
+
+    {{ 'base.css' | asset_url | stylesheet_tag }}
+    {{ 'base.js' | asset_url | preload_tag: as: 'script' }}
+
+    <!-- Header hook for plugins -->
+    {{ content_for_header }}
+</head>
+  
+  {%- capture template_name -%}
+    {{- template.name -}}{%- if template.suffix -%}-{{- template.suffix -}}{%- endif -%}
+  {%- endcapture -%}
+  
+  <body class="layout-theme template-{{- template_name -}}">
+    <div style="height: 100vh; display: flex; justify-content: center; flex-direction: column">
+      <p style="width: 100%; text-align: center">Shopify Theme StarterKit with Typescript, SCSS, Prettier & ESLint.</p>
+    </div>
+    <main id="mainContent" role="main" class="u-focus-none" tabindex="-1">
+      {{ content_for_layout }}
+    </main>
+  </body>
+</html>

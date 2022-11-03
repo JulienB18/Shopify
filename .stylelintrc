@@ -1,0 +1,40 @@
+{
+    "customSyntax": "postcss-scss",
+    "extends": ["stylelint-prettier/recommended", "stylelint-config-recommended"],
+    "plugins": ["stylelint-scss"],
+    "rules": {
+        "selector-class-pattern": null,
+        "at-rule-no-unknown": [
+            true,
+            {
+                "ignoreAtRules": [
+                    "extends",
+                    "tailwind",
+                    "screen",
+                    "include",
+                    "mixin",
+                    "for",
+                    "use",
+                    "function",
+                    "if",
+                    "error",
+                    "else",
+                    "return",
+                    "each"
+                ]
+            }
+        ],
+        "annotation-no-unknown": [
+            true,
+            {
+                "ignoreAnnotations": ["default"]
+            }
+        ],
+        "function-no-unknown": [
+            true,
+            {
+                "ignoreFunction": ["index", "map-get", "breakpoint-next", "breakpoint-min", "breakpoint-max", "em"]
+            }
+        ]
+    }
+}

@@ -1,0 +1,44 @@
+{
+    "general": {
+        "social": {
+            "title": {
+                "twitter": "Twitter",
+                "facebook": "Facebook",
+                "pinterest": "Pinterest",
+                "instagram": "Instagram",
+                "tumblr": "Tumblr",
+                "snapchat": "Snapchat",
+                "youtube": "YouTube",
+                "vimeo": "Vimeo",
+                "tiktok": "TikTok"
+            }
+        }
+    },
+    "accessibility": {
+        "skip_to_content": "Passer au contenu principal",
+        "refresh_page": "Rafraichir la page",
+        "close": "Fermer"
+    },
+    "sections": {
+        "cart": {
+            "empty": "Votre panier est vide",
+            "cart_error": "Une erreur est survenue pendant la mise à jour du panier. Veuillez réessayer.",
+            "cart_quantity_error": "Vous pouvez seulement ajouter [quantity] de ces articles dans votre panier."
+        }
+    },
+    "templates": {
+        "gift_card": {
+            "title": "Voici votre carte cadeau de {{ value }} pour le site {{ shop }}!",
+            "subtext": "Votre carte cadeau",
+            "gift_card_code": "Code de carte cadeau",
+            "shop_link": "Continuez vos achats",
+            "remaining_html": "Solde restant {{ balance }}",
+            "add_to_apple_wallet": "Ajouter au portefeuille Apple",
+            "qr_image_alt": "QR code — scannez pour utiliser la carte cadeau",
+            "copy_code": "Copier le code",
+            "expired": "Expiré",
+            "copy_code_success": "Code copié avec succès",
+            "print_gift_card": "Imprimer"
+        }
+    }
+}
